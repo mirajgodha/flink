@@ -1,4 +1,4 @@
-package quantumroot.joins;
+package quantumroot.joins_2;
 
 // Import necessary Flink classes
 import org.apache.flink.api.common.functions.JoinFunction;  // For joining datasets
@@ -12,12 +12,12 @@ import org.apache.flink.core.fs.FileSystem;  // For file system operations
 
 /**
  * This program demonstrates an Inner Join operation in Apache Flink.
- * It joins two datasets: one containing person information (id, name) and 
+ * It joins_2 two datasets: one containing person information (id, name) and
  * another containing location information (id, state).
  * The join is performed on the common 'id' field.
  */
 @SuppressWarnings("serial")
-public class InnerJoin {
+public class InnerJoin_1 {
     
     /**
      * Main method - entry point of the Flink program

@@ -1,4 +1,4 @@
-package quantumroot.joins;
+package quantumroot.joins_2;
 
 import org.apache.flink.api.common.functions.JoinFunction;
 import org.apache.flink.api.common.functions.MapFunction;
@@ -10,7 +10,7 @@ import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.core.fs.FileSystem;
 
 @SuppressWarnings("serial")
-public class RightOuterJoin
+public class RightOuterJoin_4
 {
     public static void main(String[] args) throws Exception {
 

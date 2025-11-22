@@ -4,10 +4,10 @@
  * The application showcases:
  * - Custom event generation
  * - Keyed windowed aggregation
- * - Time-based windowing (tumbling windows)
+ * - Time-based windowing_4 (tumbling windows)
  * - File sink with rolling policy
  */
-package quantumroot.dataStream;
+package quantumroot.dataStream_3;
 
 import org.apache.flink.api.common.serialization.SimpleStringEncoder;
 import org.apache.flink.core.fs.Path;
@@ -22,7 +22,6 @@ import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
 import org.apache.flink.streaming.api.functions.sink.filesystem.StreamingFileSink;
 import org.apache.flink.util.Collector;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -33,7 +32,7 @@ import java.util.Random;
  * The job generates random events, aggregates them in 10-second windows by key,
  * and writes the results to rolling files.
  */
-public class StreamAggregationToFile {
+public class StreamAggregationToFile_3 {
 
     /**
      * Represents a simple event with a key and a value.

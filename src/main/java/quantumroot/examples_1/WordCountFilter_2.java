@@ -1,20 +1,22 @@
-// Package declaration for the WordCount examples
-package quantumroot.examples;
+// Package declaration for the WordCount examples_1
+package quantumroot.examples_1;
 
 // Import necessary Flink classes
-import org.apache.flink.api.common.functions.MapFunction;  // For mapping operations
-import org.apache.flink.api.java.DataSet;  // Main abstraction for data in batch processing
-import org.apache.flink.api.java.ExecutionEnvironment;  // Entry point for Flink batch execution
-import org.apache.flink.api.java.tuple.Tuple2;  // A tuple with 2 fields (word, count)
-import org.apache.flink.api.java.utils.ParameterTool;  // For handling command line parameters
-import org.apache.flink.core.fs.FileSystem;  // For file system operations
+
+import org.apache.flink.api.common.functions.FilterFunction;
+import org.apache.flink.api.common.functions.MapFunction;
+import org.apache.flink.api.java.DataSet;
+import org.apache.flink.api.java.ExecutionEnvironment;
+import org.apache.flink.api.java.tuple.Tuple2;
+import org.apache.flink.api.java.utils.ParameterTool;
+import org.apache.flink.core.fs.FileSystem;
 
 
 /**
  * A simple WordCount program that counts the occurrences of words in a text file.
  * This demonstrates the basic structure of a Flink batch processing job.
  */
-public class WordCount {
+public class WordCountFilter_2 {
     
     /**
      * Main method - entry point of the Flink program
@@ -34,12 +36,22 @@ public class WordCount {
         if (!params.has("input")) {
             throw new Exception("No input path provided. Provide input as --input <inputPath>");
         }
-
+        
         // Read the input text file into a DataSet of Strings (each string is a line)
         DataSet<String> text = env.readTextFile(params.get("input"));
+
+        // Filter the DataSet to only include lines that start with the letter "N"
+        DataSet<String> filtered = text.filter(new FilterFunction<String>()
+
+        {
+            public boolean filter(String value)
+            {
+                return value.startsWith("e");
+            }
+        });
         
         // Transform the DataSet of lines into a DataSet of (word, 1) tuples
-        DataSet<Tuple2<String, Integer>> tokenized = text.map(new Tokenizer());
+        DataSet<Tuple2<String, Integer>> tokenized = filtered.map(new Tokenizer());
         
         // Group by the first field (word) and sum the second field (count)
         // groupBy(0) groups by the first field of the tuple
