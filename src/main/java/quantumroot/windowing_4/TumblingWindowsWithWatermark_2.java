@@ -21,7 +21,15 @@ import java.util.Date;
 //TumblingEvent
 // Use DataGenerator_2 to generate the data for this program
 public class TumblingWindowsWithWatermark_2 {
-  public static void main(String[] args) throws Exception {
+    /**
+     * Generating the data for excercise
+     * Sent: CAB-003,DL01EF9999,Prime,Sanjay Patil,ONGOING,Kothrud,Hadapsar,3 @ 2025-11-26 11:23:08
+     * Sent: CAB-001,MH12AB1234,Mini,Amit Sharma,ONGOING,Baner,Wakad,1 @ 2025-11-26 11:23:12
+     * Sent: CAB-003,DL01EF9999,SUV,Sanjay Patil,IDLE,Baner,Airport,0 @ 2025-11-26 11:23:16
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception {
     // set up the streaming execution environment
     StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
     ParameterTool params = ParameterTool.fromArgs(args);

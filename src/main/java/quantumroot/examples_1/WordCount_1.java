@@ -52,7 +52,7 @@ public class WordCount_1 {
             counts.writeAsCsv(
                 params.get("output"),  // output path
                 "\n",                 // record delimiter (newline)
-                " ",                  // field delimiter (space)
+                ",",                  // field delimiter (space)
                 FileSystem.WriteMode.OVERWRITE  // overwrite if file exists
             );
             

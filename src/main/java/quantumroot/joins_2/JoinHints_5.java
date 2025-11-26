@@ -99,7 +99,7 @@ public class JoinHints_5 {
                 //4. REPARTITION_HASH_SECOND - repartition the second dataset with hash, both are large inputs but second one is small than first
                 //5. REPARTITION_SORT_MERGE - repartition both datasets with sort merge
                 //6. OPTIMIZER_CHOOSES - let optimizer choose the best hint
-                .join(locationSet, JoinHint.REPARTITION_SORT_MERGE)
+                .join(locationSet, JoinHint.BROADCAST_HASH_FIRST)
                 // Specify join keys (field 0 from first dataset = id)
                 .where(0)
                 // Must match field 0 from second dataset (id)

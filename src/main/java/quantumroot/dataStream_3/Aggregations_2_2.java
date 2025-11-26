@@ -33,7 +33,7 @@ public class Aggregations_2_2 {
         // month, category,product, profit,
         DataStream < Tuple4 < String, String, String, Integer >> mapped = data.map(new Splitter());
         // tuple  [June,Category5,Bat,12]
-        //       [June,Category4,Perfume,10,1]
+        //       [June,Category4,Perfume,10]
         mapped.keyBy(t -> t.f0).sum(3).writeAsText(params.get("output") + "_sum");
 
         /**

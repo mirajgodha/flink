@@ -22,7 +22,7 @@ public class WordCountSocketStreaming_2 {
         env.getConfig().setGlobalJobParameters(params);
 
         // Read text from socket
-        // To create a socket text stream, start netcat on the command line : netcat localhost 9999
+        // To create a socket text stream, start netcat on the command line : nc -lk 9999
         DataStream < String > text = env.socketTextStream("localhost", 9999);
 
         DataStream < Tuple2 < String, Integer >> counts = text.filter(new FilterFunction < String > () {
