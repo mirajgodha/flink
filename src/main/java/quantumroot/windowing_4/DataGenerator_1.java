@@ -6,9 +6,10 @@ import java.net.Socket;
 import java.util.Random;
 
 public class DataGenerator_1 {
+
     public static void main(String[] args) {
-        String[] months = {"June", "July", "August"};
-        String[] categories = {"Clothes", "Glasses", "Shoes"};
+        String[] months = {"June"};
+        String[] categories = {"Clothes"};
 
         Random random = new Random();
 

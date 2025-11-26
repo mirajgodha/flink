@@ -76,7 +76,7 @@ public class SlidingWindow_SumSales_3 {
                         .build()
         );
 
-        env.execute("Total Sales - Sliding Window - Correct Version");
+        env.execute("Total Sales - Sliding Window");
     }
 
     // --------------- AGGREGATOR (SUM FUNCTION) -------------------

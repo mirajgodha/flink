@@ -19,6 +19,7 @@ public class DataGenerator_2 {
 					Date d = new Date();
 					while (true){
 						int i = rand.nextInt(100);
+                        //Output string
 						String s = "" + System.currentTimeMillis() + "," + i;	
 						System.out.println(s);
 						/* <timestamp>,<random-number> */

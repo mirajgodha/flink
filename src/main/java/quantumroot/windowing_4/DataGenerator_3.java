@@ -15,7 +15,7 @@ public class DataGenerator_3 {
     private static final DateTimeFormatter fmt =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     public static void main(String[] args) {
-        String[] sensors = {"Store-1", "Store-2", "Store-3", "Store-4"};
+        String[] store = {"Store-1", "Store-2", "Store-3", "Store-4"};
         Random random = new Random();
 
         try (ServerSocket server = new ServerSocket(9090)) {
@@ -26,10 +26,10 @@ public class DataGenerator_3 {
             try (PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
                 while (true) {
                     long timestamp = Instant.now().toEpochMilli();
-                    String sensor = sensors[random.nextInt(sensors.length)];
-                    int temperature = 15 + random.nextInt(15);  // temp between 15 and 29
+                    String store_local = store[random.nextInt(store.length)];
+                    int sales = 15 + random.nextInt(15);  // temp between 15 and 29
 
-                    String line = String.format("%d,%s,%d", timestamp, sensor, temperature);
+                    String line = String.format("%d,%s,%d", timestamp, store_local, sales);
                     System.out.println("Sent: " + line + ", " + LocalDateTime.ofInstant(
                             Instant.ofEpochMilli(timestamp),
                             ZoneId.systemDefault()

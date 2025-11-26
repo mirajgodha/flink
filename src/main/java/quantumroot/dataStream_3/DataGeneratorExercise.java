@@ -8,6 +8,14 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
+
+/**
+ *  Generating the data for excercise
+ *  Sent: CAB-003,DL01EF9999,Prime,Sanjay Patil,ONGOING,Kothrud,Hadapsar,3 @ 2025-11-26 11:23:08
+ *  Sent: CAB-001,MH12AB1234,Mini,Amit Sharma,ONGOING,Baner,Wakad,1 @ 2025-11-26 11:23:12
+ *  Sent: CAB-003,DL01EF9999,SUV,Sanjay Patil,IDLE,Baner,Airport,0 @ 2025-11-26 11:23:16
+ * @param args
+ */
 public class DataGeneratorExercise {
     private static final DateTimeFormatter fmt =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");

@@ -22,10 +22,6 @@ import java.util.Date;
 // Use DataGenerator_2 to generate the data for this program
 public class TumblingWindowsWithWatermark_2 {
     /**
-     * Generating the data for excercise
-     * Sent: CAB-003,DL01EF9999,Prime,Sanjay Patil,ONGOING,Kothrud,Hadapsar,3 @ 2025-11-26 11:23:08
-     * Sent: CAB-001,MH12AB1234,Mini,Amit Sharma,ONGOING,Baner,Wakad,1 @ 2025-11-26 11:23:12
-     * Sent: CAB-003,DL01EF9999,SUV,Sanjay Patil,IDLE,Baner,Airport,0 @ 2025-11-26 11:23:16
      * @param args
      * @throws Exception
      */
@@ -36,7 +32,7 @@ public class TumblingWindowsWithWatermark_2 {
     env.getConfig().setGlobalJobParameters(params);
 
     if (!params.has("output")) {
-      throw new Exception("No input path provided. Provide output as --output <output path profit_per_month.txt>");
+      throw new Exception("No output path provided. Provide output as --output <output path profit_per_month.txt>");
     }
 
       /**
